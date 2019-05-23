@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Psychic-Game</title>
+</head>
+
+<body>
+    <h1>Psychic-Game</h1>
+    <h4>Guess what letter I'm thinking of</h4>
+    <h4>Wins: <span id="wins"></span></h4>
+    <h4>Losses: <span id="losses"></span></h4>
+    <h4>Guesses Left: <span id="guesses"></span></h4>
+    <h4>Your Guesses so far: <span id="user-guesses"></span></h4>
+
+    <script>
+        // $ is grabbing html element from the page
+        const $wins = document.getElementById('wins');
+        const $losses = document.getElementById('losses');
+        const $guesses = document.getElementById('guesses');
+        const $userguesses = document.getElementById('user-guesses');
+        // create an array of letters 
+        var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p",
+            "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"
+        ];
+        // selects random letter
+        var answer = letters[Math.floor(Math.random() * letters.length)];
+        // variable for keeping track of wins
+        let wins = 0;
+        // variable for keeping track of losses
+        let losses = 0;
+        // variable for keeping track of guesses
+        let guesses = 9;
+        // array for keeping track of letters guessed
+        let userGuesses = [];
+
+        // onkeyup if the user lets go of check if that is the random letter picked
+        document.onkeyup = (event) => {
+            // make event key to lowercase
+            const userInput = event.key.toLowerCase();
+            // if/else condition
+            if (userInput === answer) {
+                wins++;
+                guesses = 9;
+                var answer = letters[Math.floor(Math.random() * letters.length)];
+            } else {
+                guesses--;
+                userGuesses.push(userInput);
+                // userGuesses.push(String.fromCharCode(event.key))
+            }
+            if (guesses === 0) {
+                losses++;
+                guesses = 9;
+            }
+            // Display the user and computer guesses, and wins/losses/ties.
+            $wins.textContent = wins;
+            $losses.textContent = losses;
+            $guesses.textContent = guesses;
+            $userguesses.textContent = userGuesses;
+        };
+    </script>
+</body>
+
+</html>
