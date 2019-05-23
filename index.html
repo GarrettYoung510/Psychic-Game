@@ -23,11 +23,11 @@
         const $guesses = document.getElementById('guesses');
         const $userguesses = document.getElementById('user-guesses');
         // create an array of letters 
-        var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p",
+        const letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p",
             "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"
         ];
         // selects random letter
-        var answer = letters[Math.floor(Math.random() * letters.length)];
+        let answer = letters[Math.floor(Math.random() * letters.length)];
         // variable for keeping track of wins
         let wins = 0;
         // variable for keeping track of losses
@@ -45,7 +45,7 @@
             if (userInput === answer) {
                 wins++;
                 guesses = 9;
-                var answer = letters[Math.floor(Math.random() * letters.length)];
+                answer = letters[Math.floor(Math.random() * letters.length)];
             } else {
                 guesses--;
                 userGuesses.push(userInput);
@@ -54,6 +54,7 @@
             if (guesses === 0) {
                 losses++;
                 guesses = 9;
+                answer = letters[Math.floor(Math.random() * letters.length)];
             }
             // Display the user and computer guesses, and wins/losses/ties.
             $wins.textContent = wins;
