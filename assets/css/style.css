@@ -1,0 +1,15 @@
+head,
+body {
+    background-image: url(https://www.monsterchildren.com/wp-content/uploads/2018/04/monster-children-psychic-1068x571.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+* {
+    color: aliceblue;
+}
+
+h4 {
+    font-size: 25px;
+    font-family: 'ZCOOL KuaiLe', cursive;
+}
