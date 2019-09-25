@@ -1,22 +1,17 @@
 # [Psychic-Game](https://garrettyoung510.github.io/Psychic-Game/)
 
-![Preview](https://i.lensdump.com/i/WYlZ4m.png)
+![Preview](https://media.giphy.com/media/VJOETwZ4EGtRViiCn0/giphy.gif)
 
 Try to guess what letter I am thinking of using only keyboard characters!
 
-## Getting Started
+## Reasoning/Motivation
 
-Click the link above!
+One of the first things I built
 
-### Prerequisites
+## Technologies Used
+* Vanilla JS
+* Real DOM manipulation 
 
-Your favorite browser (Google Chrome preferrably)
+## Challenges
 
-## Built With
-
-* [Visual Studio](https://visualstudio.microsoft.com/) - The text editor used
-
-## Authors
-
-* Garrett Young
-
+* Learning how JavaScript logic worked, onkeyup events
