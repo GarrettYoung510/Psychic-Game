@@ -1,9 +1,8 @@
-# Psychic-Game
-https://garrettyoung510.github.io/Psychic-Game/
+# [Psychic-Game] (https://garrettyoung510.github.io/Psychic-Game/)
 
-![Picture of the game](https://i.lensdump.com/i/WYlZ4m.png)
+![Live Preview](https://i.lensdump.com/i/WYlZ4m.png)
 
-Try to guess what letter I am thinking of!
+Try to guess what letter I am thinking of using only keyboard characters!
 
 ## Getting Started
 
